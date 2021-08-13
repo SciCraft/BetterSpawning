@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ca.fxco.betterspawning.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "CommandManagerMixin"
+  ],
+  "client": [
+    "SpawnHelper_vanillaFasterMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

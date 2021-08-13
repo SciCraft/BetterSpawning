@@ -16,8 +16,8 @@ public class BetterSpawning implements ModInitializer {
 
     public static final String[] descriptions = new String[]{
             "The vanilla spawning behaviour",
-            "Faster Vanilla spawning by checking for empty sub chunks",
-            "Faster Vanilla spawning by checking for empty & full sub chunks"
+            "Faster Vanilla spawning by skipping empty sub chunks",
+            "curved yes"
     };
 
     @Override
@@ -29,8 +29,12 @@ public class BetterSpawning implements ModInitializer {
         for (Algorithm algorithm : Algorithm.values()) {
             betterSpawning.then(
                 CommandManager.literal(algorithm.name)
+                    .then(CommandManager.literal("about").executes(c -> {
+                        sendToPlayer(c.getSource().getPlayer(), descriptions[algorithm.ordinal()]);
+                        return 1;
+                    }))
                     .executes((c) -> {
-                        if (algorithm.name == currentAlgorithm.name) {
+                        if (algorithm.name.equals(currentAlgorithm.name)) {
                             sendToPlayer(c.getSource().getPlayer(), "Algorithm §5"+algorithm.name+" §fis already being used!");
                         } else {
                             currentAlgorithm = algorithm;

@@ -3,4 +3,4 @@
 ## Algorithms
 
 ### emptySubChunkOptimization
-Removes a check in the code which does not change the vanilla mechanic while allowing for mob spawning to be much faster (x7) then before!
+Removes a check in the code which does not change the vanilla mechanic while allowing for mob spawning to be much faster (up to x8) then before!

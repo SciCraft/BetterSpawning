@@ -2,4 +2,5 @@
 
 ## Algorithms
 
-### Bell Curve based on players
+### emptySubChunkOptimization
+Removes a check in the code which does not change the vanilla mechanic while allowing for mob spawning to be much faster (x7) then before!
